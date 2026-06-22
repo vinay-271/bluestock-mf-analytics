@@ -2,27 +2,35 @@
 
 ## Overview
 
-This project aims to build a complete Mutual Fund Analytics platform using Python, SQL, and interactive dashboards. The objective is to collect, process, analyze, and visualize mutual fund performance data to generate actionable investment insights.
+A data analytics project focused on collecting, processing, analyzing, and visualizing mutual fund performance data to generate actionable investment insights.
 
 ---
 
-## Project Goals
+## Project Objectives
 
-* Collect historical mutual fund NAV data
-* Build a structured data pipeline
-* Perform data quality validation
-* Calculate returns and risk metrics
+* Collect mutual fund NAV data
+* Build a clean data pipeline
+* Perform return and risk analysis
 * Compare funds against benchmarks
 * Create interactive dashboards
-* Generate investment insights and reports
+* Generate investment insights
 
 ---
 
-# Day 1: Data Ingestion & Project Setup
+## Tech Stack
 
-## Tasks Completed
+| Category        | Tools                       |
+| --------------- | --------------------------- |
+| Language        | Python                      |
+| Data Processing | Pandas, NumPy               |
+| Visualization   | Matplotlib, Seaborn, Plotly |
+| Data Storage    | CSV, SQL                    |
+| Version Control | Git, GitHub                 |
+| Development     | Jupyter Notebook            |
 
-### Project Structure Created
+---
+
+## Project Structure
 
 ```text
 mutual-fund-analytics/
@@ -36,172 +44,141 @@ mutual-fund-analytics/
 ├── dashboard/
 ├── reports/
 ├── scripts/
-│   ├── data_ingestion.py
-│   └── live_nav_fetch.py
 │
 ├── requirements.txt
 ├── README.md
 └── .gitignore
 ```
 
-### Environment Setup
+---
 
-* Created Python virtual environment (`.venv`)
-* Installed required dependencies
-* Configured project structure
+# Development Log
+
+This section tracks project progress day-by-day.
+
+---
+
+## Day 1 — Data Ingestion & Environment Setup
+
+### Tasks Completed
+
+* Created project directory structure
+* Created Python virtual environment
+* Installed project dependencies
 * Initialized Git repository
+* Built data ingestion scripts
+* Downloaded mutual fund NAV history from MFAPI
+* Stored raw datasets in `data/raw`
 
-### Dependencies Installed
+### Files Added
 
-* pandas
-* numpy
-* matplotlib
-* seaborn
-* plotly
-* sqlalchemy
-* requests
-* scipy
-* jupyter
+```text
+scripts/data_ingestion.py
+scripts/live_nav_fetch.py
+requirements.txt
+```
 
-### Data Collection
+### Data Sources
 
-Historical NAV data was downloaded using the MFAPI endpoint:
+MFAPI Endpoint:
 
 ```text
 https://api.mfapi.in/mf/{scheme_code}
 ```
 
-Data was collected for selected mutual fund schemes and stored as individual CSV files in:
+### Notes
 
-```text
-data/raw/
+* Historical NAV data successfully collected.
+* Fund master dataset was not provided.
+* AMFI master scheme dataset was not provided.
+* Validation tasks requiring fund_master have been deferred until metadata is available.
+
+### Commit
+
+```bash
+git commit -m "Day 1: Data ingestion complete"
 ```
 
-### Scripts Developed
+---
 
-#### data_ingestion.py
+## Day 2 — Data Cleaning & Consolidation
 
-Responsible for:
+### Tasks Completed
 
-* Downloading NAV history
-* Parsing API responses
-* Saving raw datasets
-* Creating a reproducible ingestion pipeline
+*To be updated*
 
-#### live_nav_fetch.py
+### Files Added
 
-Responsible for:
+*To be updated*
 
-* Fetching latest NAV values
-* Saving current NAV snapshots
-* Supporting future real-time analysis
+### Findings
+
+*To be updated*
+
+### Commit
+
+```bash
+git commit -m "Day 2: Data cleaning and preprocessing"
+```
 
 ---
 
-## Data Quality Observations
+## Day 3 — Exploratory Data Analysis
 
-### Available Data
+### Tasks Completed
 
-The project currently contains:
+*To be updated*
 
-* Historical NAV data
-* Scheme metadata available from MFAPI
+### Files Added
 
-### Missing Data Sources
+*To be updated*
 
-The original task referenced:
+### Findings
 
-* fund_master dataset
-* AMFI scheme master
-* category information
-* risk grades
+*To be updated*
 
-These datasets were not provided.
+### Commit
 
-Therefore:
-
-* Full AMFI validation could not be performed
-* Category-level analysis is deferred
-* Risk-grade analysis is deferred
-
-### Assumptions
-
-A lightweight fund master table will be generated from API metadata where available.
-
-Future versions of the project will incorporate the complete AMFI scheme master dataset.
+```bash
+git commit -m "Day 3: Exploratory data analysis"
+```
 
 ---
 
-## Deliverables
+## Future Milestones
 
-* Project directory structure
-* Python virtual environment
-* requirements.txt
-* data_ingestion.py
-* live_nav_fetch.py
-* Raw NAV datasets
-* Git repository initialized
+### Phase 1 — Data Collection
 
----
+* [x] Project setup
+* [x] NAV data ingestion
+* [ ] Fund metadata acquisition
+* [ ] Data validation
 
-## Next Steps (Day 2)
+### Phase 2 — Data Processing
 
-### Data Engineering
+* [ ] Data cleaning
+* [ ] Missing value handling
+* [ ] Feature engineering
 
-* Build consolidated NAV history table
-* Create master scheme dataset
-* Convert date columns
-* Handle missing values
+### Phase 3 — Analytics
 
-### Analytics
+* [ ] Return calculations
+* [ ] CAGR
+* [ ] Rolling returns
+* [ ] Volatility
+* [ ] Sharpe ratio
 
-* Daily returns
-* Rolling returns
-* CAGR
-* Volatility
-* Sharpe Ratio
+### Phase 4 — Dashboard
 
-### Dashboard Preparation
+* [ ] Fund comparison dashboard
+* [ ] Risk-return visualization
+* [ ] Performance tracking
 
-* Fund comparison views
-* NAV trend visualizations
-* Risk-return analysis
+### Phase 5 — Reporting
 
----
+* [ ] Automated reports
+* [ ] Investment insights
+* [ ] Final documentation
 
-## Tech Stack
-
-### Programming
-
-* Python
-
-### Data Processing
-
-* Pandas
-* NumPy
-
-### Visualization
-
-* Matplotlib
-* Seaborn
-* Plotly
-
-### Storage
-
-* CSV
-* SQL (planned)
-
-### Version Control
-
-* Git
-* GitHub
-
----
-
-## Author
-
-Vinay Kumar
-
-B.Tech Computer Science (AI/ML)
-
-Building a data-driven mutual fund analytics platform for performance evaluation, risk analysis, and investment insights.
+```
+```
