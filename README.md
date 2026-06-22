@@ -44,7 +44,8 @@ mutual-fund-analytics/
 ├── dashboard/
 ├── reports/
 ├── scripts/
-│
+│   ├── data_ingestion.py
+|   └── live_nav_fetch.py
 ├── requirements.txt
 ├── README.md
 └── .gitignore
