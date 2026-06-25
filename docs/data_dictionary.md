@@ -20,7 +20,6 @@
 | risk_category | TEXT | Risk classification | 01_fund_master.csv |
 | sebi_category_code | TEXT | SEBI category code | 01_fund_master.csv |
 
-## dim_aum
 ## dim_date
 
 **Description:**
